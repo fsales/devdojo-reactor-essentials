@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>project-reactor-essentials</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Archetype - project-reactor-essentials</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <reactor-core-version>3.6.0</reactor-core-version>
+        <java.version>17</java.version>
+        <maven.compile.source>17</maven.compile.source>
+        <maven.compile.target>17</maven.compile.target>
+        <junit.version>5.10.1</junit.version>
+        <lombok.version>1.18.30</lombok.version>
+        <slf4j-api.version>2.0.9</slf4j-api.version>
+        <logback-classic.version>1.4.11</logback-classic.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>${reactor-core-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!-- logs -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <version>${reactor-core-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- Use a versão mais recente disponível -->
+                <configuration>
+                    <source>17</source> <!-- Atualize para a versão do Java desejada -->
+                    <target>17</target> <!-- Atualize para a versão do Java desejada -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
